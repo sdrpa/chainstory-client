@@ -1,3 +1,3 @@
-### [Chain Story Front-end](https://chainstory.art/about)
+### Chain Story Front-end
 
 [chainstory.art front-end web app](https://chainstory.art)
