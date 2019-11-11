@@ -1,0 +1,17 @@
+.container {
+   --color: #ccc;
+}
+
+.container {
+   color: var(--color);
+}
+
+.a {
+   color: var(--color);
+   text-decoration: none;
+}
+
+.donation {
+   color: #e8b923;
+   font-weight: 500;
+}

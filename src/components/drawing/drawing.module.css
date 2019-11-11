@@ -1,0 +1,25 @@
+.container {
+   width: 100%;
+}
+
+.drawing {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+
+   padding: 1em;
+}
+
+.description {
+   color: #555;
+   font-size: 0.95em;
+   padding: 1em;
+   text-align: center;
+}
+
+.buttons {
+   display: flex;
+   justify-content: center;
+
+   margin: 2em;
+}

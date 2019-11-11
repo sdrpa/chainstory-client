@@ -1,0 +1,44 @@
+.a {
+   color: #0070c9;
+   text-decoration: none;
+}
+
+.a::after {
+   content: "\00BB";
+   padding-left: 0.1em;
+}
+
+.a1 {
+   color: #0070c9;
+   font-weight: 500;
+   text-decoration: none;
+}
+
+.about {
+   height: 100%; /* due to main flex align-items: center */ 
+   color: #555;
+   padding: 1em;
+}
+
+.block {
+   line-height: 1.2;
+   margin-bottom: 2em;
+}
+
+.block h3 {
+   font-weight: bold;
+   margin-bottom: 0.5em;
+}
+
+.block h4 {
+   font-weight: 500;
+   margin-bottom: 0.25em;
+}
+
+.block h4:first-child {
+   font-style: italic;
+}
+
+.block p {
+   margin: 0;
+}

@@ -1,0 +1,89 @@
+.label {
+   position: absolute;
+   top: 0;
+   left: 0;
+   user-select: none;
+   z-index: 1500;
+}
+
+/* Hide the browser-specific focus styles */
+.input {
+   color: rgba(44, 62, 80, .75);
+   border-width: 0;
+   z-index: 2000;
+}
+
+.input:focus {
+   outline: 0;
+   box-shadow: 0;
+}
+
+.input::placeholder {
+   color: rgba(44, 62, 80, .5);
+}
+
+/* Make the label and field look identical on every browser */
+.label,
+.input {
+   font: inherit;
+   line-height: 1;
+   display: block;
+   width: 100%;
+}
+
+.input,
+.container {
+   position: relative;
+}
+
+/* Input Style 1 */
+.input1 {
+   transition: border-color .25s ease-in-out;
+   color: rgba(0, 0, 0, .75);
+   border-bottom: 3px solid rgba(0, 0, 0, .05);
+   background-color: transparent;
+}
+
+.input1 + .label {
+   transition: transform .25s, opacity .25s ease-in-out;
+   transform-origin: 0 0;
+   opacity: .5;
+}
+
+.input1:focus,
+.input1:not(:placeholder-shown) {
+   border-color: rgba(0, 0, 0, .1);
+}
+
+.input1:focus + .label,
+.input1:not(:placeholder-shown)+.label {
+   transform: translate(0, -30%) scale(.8);
+   opacity: .25;
+}
+
+.input1:valid:not(:placeholder-shown) {
+   border-color: rgba(46, 213, 115, .3);
+}
+
+.input1:invalid {
+   border-color: rgba(255, 71, 87, .3);
+}
+
+/* Common Styles */
+/* Identical inputs on all browsers */
+.input1:not(textarea) {
+   max-height: 4em;
+}
+
+.input1,
+.input1 + .label {
+   padding: 1em 0;
+}
+
+.input1 + .label {
+   z-index: 1500;
+}
+
+.input1::placeholder {
+   color: transparent;
+}

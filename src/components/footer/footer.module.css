@@ -1,0 +1,14 @@
+footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.p {
+   color: #555;
+   font-size: 0.75em;
+}
+
+.p span {
+   color: #e25555;
+}

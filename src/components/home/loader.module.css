@@ -1,0 +1,38 @@
+.spinner {
+   --move: 1.2em;
+}
+
+.spinner {
+   margin: calc(var(--image-width)/2) auto;
+   position: relative;
+ }
+ 
+.cube1, 
+.cube2 {
+   background-color: #ddd;
+   width: 1em;
+   height: 1em;
+   position: absolute;
+   top: 0;
+   left: 0;
+   
+   animation: sk-cubemove 1.8s infinite ease-in-out;
+}
+ 
+.cube2 {
+   animation-delay: -0.9s;
+}
+ 
+@keyframes sk-cubemove {
+   25% { 
+      transform: translateX(var(--move));
+   } 50% { 
+      transform: translateX(var(--move)) translateY(var(--move)) ;
+   } 50.1% { 
+      transform: translateX(var(--move)) translateY(var(--move)) ;
+   } 75% { 
+      transform: translateX(0px) translateY(var(--move));
+   } 100% { 
+      transform: rotate(-360deg);
+   }
+}
