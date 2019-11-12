@@ -73,7 +73,7 @@ const Drawing = () => {
             <Canvas matrix={matrix} currColor={currColor} setColor={setColor} />
             <ColorPicker colors={Colors.slice(13, 26)} currColor={currColor} setColor={c => setCurrColor(c)} />
          </div>
-         <p className={styles.description}>Select a color then click to paint. Double-click to erase.</p>
+         <p className={styles.description}>Select a color then click or drag to paint. Double-click to erase.</p>
          <div className={styles.buttons}>
             <Button type="danger"
                text="Clear All"
