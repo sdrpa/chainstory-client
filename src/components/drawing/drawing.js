@@ -85,7 +85,7 @@ const Drawing = () => {
             <Canvas matrix={matrix} currColor={currColor} setColor={setColor} />
             <ColorPicker colors={Colors.slice(13, 26)} currColor={currColor} setColor={c => setCurrColor(c)} />
          </div>
-         <p className={styles.description}>Select a color then click or drag to paint. Double-click to erase.</p>
+			<p className={styles.description}>Select a color then click or drag to paint. Paint with <span className={styles.crossMark} role="img" aria-label="transparent">&#10060;</span> to erase or double-click a colored pixel.</p>
          <div className={styles.buttons}>
             <Button type="danger"
                text="Clear All"
