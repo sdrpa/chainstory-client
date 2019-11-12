@@ -21,7 +21,6 @@
 
 .crossMark {
    color: red;
-   padding-left: 3px; /* Compensate emoji off-center */
 
    -webkit-touch-callout: none; /* iOS Safari */
      -webkit-user-select: none; /* Safari */
