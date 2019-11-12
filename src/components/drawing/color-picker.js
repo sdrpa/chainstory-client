@@ -2,15 +2,20 @@ import React from 'react'
 
 import styles from './color-picker.module.css';
 
-const Color = ({ background, selected, onClick }) => {
+const Color = ({ background, hasCrossMark, selected, onClick }) => {
    return (
       <div
          className={`${background} ${styles.color} ${selected ? styles.selected : ''}`}
-         onClick={onClick} />
+         onClick={onClick}>
+      {hasCrossMark 
+         ? <span className={styles.crossMark} role="img" aria-label="transparent">&#10060;</span> 
+         : null
+      }
+      </div>
    );
 }
 
-const ColorPicker = ({ colors, currColor, setColor }) => {
+const ColorPicker = ({ colors, currColor, firstHasCrossMark = false, setColor }) => {
    return (
       <div className={styles.colorPicker}>
          {colors.map((color, index) => {
@@ -18,6 +23,7 @@ const ColorPicker = ({ colors, currColor, setColor }) => {
                <Color
                   key={index}
                   background={color}
+                  hasCrossMark={index === 0 && firstHasCrossMark}
                   selected={currColor === color}
                   onClick={e => setColor(color)} />
             )

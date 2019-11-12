@@ -81,7 +81,7 @@ const Drawing = () => {
    return (
       <div className={styles.container}>
          <div className={styles.drawing}>
-            <ColorPicker colors={Colors.slice(0, 13)} currColor={currColor} setColor={c => setCurrColor(c)} />
+            <ColorPicker colors={Colors.slice(0, 13)} currColor={currColor} firstHasCrossMark={true} setColor={c => setCurrColor(c)} />
             <Canvas matrix={matrix} currColor={currColor} setColor={setColor} />
             <ColorPicker colors={Colors.slice(13, 26)} currColor={currColor} setColor={c => setCurrColor(c)} />
          </div>
