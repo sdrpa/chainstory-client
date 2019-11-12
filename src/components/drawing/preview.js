@@ -1,5 +1,5 @@
 import React from 'react';
-import Canvas from './canvas'
+import Canvas from '../preview/canvas' // Be careful, must use preview canvas instead of ./canvas
 
 import styles from '../preview/preview.module.css';
 
