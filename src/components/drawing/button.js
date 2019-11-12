@@ -6,7 +6,9 @@ const Button = ({ text, type, disabled, onClick }) => {
    const background = type => {
       switch (type) {
          case 'primary': return styles.primary
-         default: return styles.danger
+         case 'info':    return styles.info
+         default: 
+            return styles.danger
       }
    }
    return (

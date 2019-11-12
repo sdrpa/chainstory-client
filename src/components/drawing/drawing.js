@@ -4,6 +4,7 @@ import { Colors, rgba } from './colors'
 import ColorPicker from './color-picker'
 import Canvas from './canvas';
 import { Matrix } from './colors'
+import Preview from './preview'
 import Sheet from '../sheet/sheet'
 
 import styles from './drawing.module.css';
@@ -17,6 +18,7 @@ const Drawing = () => {
    const [matrix, setMatrix] = useState(Matrix())
    const [currColor, setCurrColor] = useState('red')
    const [showSheet, setShowSheet] = useState(false);
+   const [showPreview, setShowPreview] = useState(false);
 
    const setColor = (rowIndex, colIndex, color) => {
       const m = JSON.parse(JSON.stringify(matrix));
@@ -27,11 +29,21 @@ const Drawing = () => {
       }
    };
 
-   const reset = () => {
+   const handleReset = () => {
       setMatrix(Matrix())
    }
 
-   const toggleSheet = () => {
+   const handleShowPreview = e => {
+      e.stopPropagation();
+      setShowPreview(true);
+   };
+
+   const handleClosePreview = e => {
+      e.stopPropagation();
+      setShowPreview(false);
+   };
+
+   const handleToggleSheet = () => {
       setShowSheet(prevState => !prevState);
    }
 
@@ -78,13 +90,23 @@ const Drawing = () => {
             <Button type="danger"
                text="Clear All"
                disabled={dataURL === EMPTY_DATA_URL}
-               onClick={reset} />
+               onClick={handleReset} />
+            <Button type="info" 
+               text="Preview" 
+               disabled={dataURL === EMPTY_DATA_URL}
+               onClick={handleShowPreview}/>
             <Button type="primary" 
                text="Submit" 
                disabled={dataURL === EMPTY_DATA_URL}
-               onClick={toggleSheet}/>
+               onClick={handleToggleSheet}/>
          </div>
-         <Sheet isShown={showSheet} drawing={drawing} onDismiss={toggleSheet} />
+         <Sheet isShown={showSheet} drawing={drawing} onDismiss={handleToggleSheet} />
+         {showPreview
+            ? <Preview 
+               matrix={matrix} 
+               onClose={e => handleClosePreview(e)} />
+            : null
+         }
       </div>
    );
 }

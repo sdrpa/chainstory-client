@@ -18,7 +18,10 @@ const Canvas = ({ index, matrix }) => {
                })
             )}
          </div>
-         <Metadata index={index} />
+         {index 
+            ? <Metadata index={index} />
+            : null
+         }
       </div>
    );
 };
