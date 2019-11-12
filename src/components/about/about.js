@@ -28,7 +28,7 @@ function About() {
 
          <div className={styles.block}>
             <h3>Source code</h3>
-            <p>Both the client and server source code are available at: <a className={styles.a} target="_blank" rel="noopener noreferrer" href="https://github/sdrpa/chainstory">https://github/sdrpa/chainstory</a></p>
+            <p>Both the client and server source code are available at: <a className={styles.a} target="_blank" rel="noopener noreferrer" href="https://github.com/sdrpa/chainstory-client">https://github.com/sdrpa/chainstory-client</a>, <a className={styles.a} target="_blank" rel="noopener noreferrer" href="https://github.com/sdrpa/chainstory-server">https://github.com/sdrpa/chainstory-server</a></p>
          </div>
 
          <div className={styles.block}>
